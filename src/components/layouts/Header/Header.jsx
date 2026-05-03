@@ -11,7 +11,14 @@ import "./Header.css";
 import { useStateValue } from "../../../context/StateProvider";
 
 const Header = () => {
-  const [{ basket }] = useStateValue();
+  const [{ basket, searchTerm }, dispatch] = useStateValue();
+
+  const handleSearch = (e) => {
+    dispatch({
+      type: "SET_SEARCH_TERM",
+      term: e.target.value,
+    });
+  };
 
   return (
     <div>
@@ -34,6 +41,8 @@ const Header = () => {
             type="text"
             className="search_input"
             placeholder="Search Amazon"
+            value={searchTerm}
+            onChange={handleSearch}
           />
           <button className="search_icon">
             <SearchOutlinedIcon />

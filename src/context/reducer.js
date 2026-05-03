@@ -2,7 +2,8 @@
 const savedBasket = JSON.parse(localStorage.getItem("basket"));
 
 export const initialState = {
-  basket: savedBasket || [],  // Use the saved basket if it exists, otherwise start empty
+  basket: savedBasket || [], // Use the saved basket if it exists, otherwise start empty
+  searchTerm: "",
 };
 
 // Selector to calculate the total price
@@ -10,7 +11,6 @@ export const getBasketTotal = (basket) =>
   basket?.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
-
   switch (action.type) {
     case "ADD_TO_BASKET":
       const updatedBasketAdd = [...state.basket, action.item];
@@ -38,13 +38,19 @@ const reducer = (state, action) => {
       }
 
       // Save the updated basket after removal
-      localStorage.setItem("basket", JSON.stringify(newBasket))
+      localStorage.setItem("basket", JSON.stringify(newBasket));
 
       return {
         ...state,
         basket: newBasket,
       };
-      
+
+    case "SET_SEARCH_TERM":
+      return {
+        ...state,
+        searchTerm: action.term,
+      };
+
     default:
       return state;
   }

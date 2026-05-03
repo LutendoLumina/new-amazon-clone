@@ -4,7 +4,7 @@ import Products from "../Product/Product";
 import { categories } from "../../data/categories.js";
 import CategoryCard from "../Category/CategoryCard";
 
-const Home = () => {
+const Home = () => {  
   return (
     <div className="home">
       <div className="home_container">

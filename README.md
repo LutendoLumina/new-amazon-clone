@@ -96,6 +96,25 @@ A fully functional Amazon-inspired e-commerce application built with React and J
   - **South African Localization:** Used `Intl.NumberFormat` for professional ZAR currency display.
   - **Optimized UI:** Separate `CheckoutProduct` component designed for better readability during the checkout process.
 
+### 1. Context-Aware Search (Manual Feature)
+- **Status:** ✅ Completed (15-Mark Assignment Requirement)[cite: 1]
+- **Description:** A custom-built search engine that allows users to find products in real-time without external libraries or AI assistance.[cite: 1]
+- **Engineering Highlights:**
+  - **Lifting State:** The search term is managed in the Global State Provider, allowing the `Header` to update the `Home` and `Product` results simultaneously.[cite: 1]
+  - **Advanced Filtering:** Implemented a combined `.filter()` logic that respects both the `categoryId` from the URL and the `searchTerm` string.[cite: 1]
+  - **Case-Insensitive Logic:** Utilized `.toLowerCase()` on both data and user input to ensure a seamless search experience.[cite: 1]
+
+  ### 2. Global State & LocalStorage
+- **Status:** ✅ Completed[cite: 1]
+- **Description:** Orchestrated a "Single Source of Truth" for the application using `useReducer`.[cite: 1]
+- **Key Details:**
+  - **Persistence:** The `reducer.js` handles `JSON.stringify` and `JSON.parse` to sync the state with `localStorage` on every cart update.[cite: 1]
+  - **Cart Intelligence:** The removal logic uses `findIndex` and `splice` to ensure only a single instance of a product is removed, preventing the accidental deletion of duplicate items.[cite: 1]
+
+### 3. Dynamic Product Results Page
+- **Status:** ✅ Completed[cite: 1]
+- **Key Details:** Leveraged `react-router-dom` and the `useParams` hook to capture category IDs from the URL to drive page content dynamically.[cite: 1]
+
 ### 3. Responsive Design
 - **Status:** 🔄 In Progress
 - **Desktop:** Full layout with multi-column grids.
