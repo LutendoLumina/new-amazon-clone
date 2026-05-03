@@ -59,13 +59,15 @@ const Header = () => {
           <strong>& Orders</strong>
         </div>
 
-        <div className="cart">
-          <AddShoppingCartOutlinedIcon className="cart_icon" />
-          {basket?.length > 0 && (
-            <span className="cart_count">{basket.length}</span>
-          )}
-          <p>Cart</p>
-        </div>
+        <Link to="/checkout">
+          <div className="cart">
+            <AddShoppingCartOutlinedIcon className="cart_icon" />
+            {basket?.length > 0 && (
+              <span className="cart_count">{basket.length}</span>
+            )}
+            <p>Cart</p>
+          </div>
+        </Link>
       </nav>
 
       {/* sub navigation bar */}

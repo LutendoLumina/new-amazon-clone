@@ -88,6 +88,14 @@ A fully functional Amazon-inspired e-commerce application built with React and J
   - **Persistence & Feedback:** Connected the Header component to the global state to provide real-time visual feedback (item count) as users interact with products.
   - **Clean Architecture:** Separated the reducer logic and action types into dedicated files, ensuring the codebase remains maintainable and scalable.
 
+### 🛍️ Shopping Basket & Checkout
+- **Status:** ✅ Functional
+- **Features:**
+  - **Basket Persistence:** Global state keeps items in the cart while navigating between pages.
+  - **Dynamic Subtotal:** Automatic calculation of total costs using JavaScript `reduce`.
+  - **South African Localization:** Used `Intl.NumberFormat` for professional ZAR currency display.
+  - **Optimized UI:** Separate `CheckoutProduct` component designed for better readability during the checkout process.
+
 ### 3. Responsive Design
 - **Status:** 🔄 In Progress
 - **Desktop:** Full layout with multi-column grids.
@@ -144,7 +152,7 @@ amazon-clone/
 ### Phase 1: Core Features (Current)
 - [x] Header and Navigation
 - [x] Category Grid Layout
-- [ ] Product grid and individual product cards
+- [x] Product grid and individual product cards
 - [ ] Add to cart & remove from cart logic
 - [ ] LocalStorage persistence
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStateValue } from '../context/StateProvider'
+import { getBasketTotal } from '../context/reducer';
 
 export const useShop = () => {
     const [{basket}, dispatch] = useStateValue();
@@ -26,7 +27,9 @@ export const useShop = () => {
     }
 
   return{
-    basket,
+    cart: basket || [],
+    itemCount: basket?.length || 0,
+    getCartTotal: () => getBasketTotal(basket),
     addToBasket,
     removeFromBasket
   }
