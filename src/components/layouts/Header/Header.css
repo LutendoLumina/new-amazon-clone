@@ -1,0 +1,315 @@
+/* Main Navigation Bar */
+.main-nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #131921;
+  color: white;
+  padding: 0 15px;
+  gap: 15px;
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+.logo:hover {
+    border: 1px solid white;
+}
+
+/* Delivery Location Section */
+.country {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.country:hover {
+    border: 1px solid white;
+}
+
+.country .country_d {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+}
+
+.country .country_name {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Search Section */
+.search {
+  display: flex;
+  width: 600px;
+  border-radius: 4px;
+  overflow: hidden;
+  align-items: center;
+  background-color: white;
+}
+
+.search .search_input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search .search_input::placeholder {
+  color: #999;
+}
+
+.search .search_icon {
+  width: 10%;
+  height: 40px;
+  background-color: #cd9042;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search .search_icon:hover {
+  background-color: #d4a455;
+}
+
+.search .search_icon svg {
+  color: #131921;
+  font-size: 20px;
+}
+
+/* Language Selector */
+.language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.language:hover {
+    border: 1px solid white;
+}
+
+.flag {
+  width: 20px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.language p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.language svg {
+  font-size: 18px;
+}
+
+/* Account Section */
+.account {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.account:hover {
+    border: 1px solid white;
+}
+
+.account p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.account .sub-account {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.account .sub-account p {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.account .sub-account svg {
+  font-size: 18px;
+}
+
+/* Returns Section */
+.returns {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.returns:hover {
+    border: 1px solid white;
+}
+
+.returns p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.returns strong {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Cart Section */
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+  position: relative;
+  min-width: 60px;
+}
+
+.cart:hover {
+    border: 1px solid white;
+}
+
+.cart .cart_icon {
+  font-size: 30px;
+  color: white;
+  position: relative;
+}
+
+.cart p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Cart Badge */
+.cart_count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #cd9042;
+  color: #131921;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Sub Navigation Bar */
+.sub-nav {
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #232f3e;
+  color: white;
+  padding: 0 15px;
+  gap: 20px;
+}
+
+.sub-nav .menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.sub-nav .menu:hover {
+    border: 1px solid white;
+}
+
+.sub-nav .menu svg {
+  font-size: 24px;
+}
+
+.sub-nav .menu p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sub-nav .menu p:hover {
+    border: none;
+}
+
+.sub-nav p {
+  margin: 0;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.sub-nav p:hover {
+    border: 1px solid white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .search {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+
+  .search {
+    width: 100%;
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .language,
+  .account,
+  .returns {
+    display: none;
+  }
+
+  .sub-nav {
+    gap: 10px;
+  }
+}
