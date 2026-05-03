@@ -6,7 +6,7 @@ const CategoryCard = ({ title, image, linkText, id }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate("/category/${id}");
+    navigate( `/category/${id}`);
   };
 
   return (

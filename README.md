@@ -70,6 +70,15 @@ A fully functional Amazon-inspired e-commerce application built with React and J
   - **Advanced CSS Positioning:** Utilized a negative `margin-top` strategy with `z-index` stacking to achieve the "Amazon Overlap" effect where cards float over the hero banner.
   - **Vite Asset Optimization:** Integrated local image assets via ES6 imports for optimized performance.
 
+### 3. Dynamic Product Results Page
+- **Status:** ✅ Completed
+- **Description:** A dedicated results page that dynamically filters and displays products based on the selected category.
+- **Key Details:**
+  - **Dynamic Routing:** Leveraged `react-router-dom` and the `useParams` hook to capture category IDs from the URL (e.g., `/category/gaming`) to drive page content.
+  - **Data Filtering Logic:** Implemented client-side filtering to match products with their respective categories, ensuring a scalable "single-page" architecture for multiple departments.
+  - **Responsive Product Grid:** Built a flexible layout using CSS Flexbox with `flex-wrap`, allowing products to flow horizontally on desktops and stack vertically on smaller screens.
+  - **Currency Localization:** Formatted pricing to align with the South African market (ZAR) using consistent currency styling.
+
 ### 3. Responsive Design
 - **Status:** 🔄 In Progress
 - **Desktop:** Full layout with multi-column grids.
@@ -84,6 +93,14 @@ While building the current features, I focused on several core software engineer
 *   **Separation of Concerns:** Metadata is stored in standalone data files, mimicking a real-world API data layer.
 *   **CSS Stacking Contexts:** Mastered the use of `position: relative` and `z-index` to manage complex, overlapping layouts.
 *   **DRY (Don't Repeat Yourself):** Utilized the JavaScript `.map()` function to generate the grid, ensuring the code remains clean and maintainable.
+
+## 💡 Technical Highlights (Product Results)
+
+In this phase, I focused on advanced React patterns and professional CSS layouts:
+
+*   **URL-Driven State:** Instead of keeping the category in local state, I moved it to the URL. This allows users to bookmark specific categories and use the browser's back/forward buttons.
+*   **Template Literals & Logic:** Used JavaScript template literals for dynamic string manipulation in navigation and header titles.
+*   **Reusable Component Design:** The `ProductCard` was designed to be independent of its parent, allowing it to be used in the homepage grid or the search results page without code duplication.
 
 ---
 
