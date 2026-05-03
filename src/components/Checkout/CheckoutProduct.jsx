@@ -3,7 +3,7 @@ import { useShop } from "../../hooks/useShop";
 import "./CheckoutProduct.css";
 
 const CheckoutProduct = ({ id, image, title, price, rating }) => {
-  const { removeFromCart } = useShop();
+  const { removeFromBasket } = useShop();
 
   return (
     <div className="checkout_product">
@@ -33,7 +33,7 @@ const CheckoutProduct = ({ id, image, title, price, rating }) => {
         </div>
 
         <div className="checkout_product_actions">
-          <button className="action_link" onClick={() => removeFromCart(id)}>Delete</button>
+          <button className="action_link" onClick={() => removeFromBasket(id)}>Delete</button>
           <span className="separator">|</span>
           <button className="action_link">Save for later</button>
           <span className="separator">|</span>

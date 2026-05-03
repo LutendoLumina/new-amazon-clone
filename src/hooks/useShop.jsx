@@ -6,7 +6,6 @@ export const useShop = () => {
     const [{basket}, dispatch] = useStateValue();
 
     const addToBasket = (product) => {
-        console.log("Action triggered for:", product.title);
         dispatch({
             type: "ADD_TO_BASKET",
             item: {
@@ -26,11 +25,15 @@ export const useShop = () => {
         })
     }
 
+    const getCartTotal = () => {
+        return getBasketTotal(basket);
+    }
+
   return{
     cart: basket || [],
     itemCount: basket?.length || 0,
-    getCartTotal: () => getBasketTotal(basket),
     addToBasket,
-    removeFromBasket
+    removeFromBasket,
+    getCartTotal,
   }
 }
