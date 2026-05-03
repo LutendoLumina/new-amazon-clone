@@ -79,6 +79,15 @@ A fully functional Amazon-inspired e-commerce application built with React and J
   - **Responsive Product Grid:** Built a flexible layout using CSS Flexbox with `flex-wrap`, allowing products to flow horizontally on desktops and stack vertically on smaller screens.
   - **Currency Localization:** Formatted pricing to align with the South African market (ZAR) using consistent currency styling.
 
+### 4. Global State Management (Context API)
+- **Status:** ✅ Completed
+- **Description:** Implemented a centralized data layer to handle the shopping cart across all components.
+- **Key Details:**
+  - **Context API & Reducers:** Used `useContext` and `useReducer` hooks to manage a "Single Source of Truth" for the application state.
+  - **Custom Service Hook (`useShop`):** Architected a custom hook to decouple business logic (adding/removing items) from the UI components (`ProductCard`, `Header`).
+  - **Persistence & Feedback:** Connected the Header component to the global state to provide real-time visual feedback (item count) as users interact with products.
+  - **Clean Architecture:** Separated the reducer logic and action types into dedicated files, ensuring the codebase remains maintainable and scalable.
+
 ### 3. Responsive Design
 - **Status:** 🔄 In Progress
 - **Desktop:** Full layout with multi-column grids.
@@ -106,19 +115,26 @@ In this phase, I focused on advanced React patterns and professional CSS layouts
 
 ## 📁 Project Structure
 amazon-clone/
+├── public/
 ├── src/
+│   ├── assets/
+│   │   └── products/
 │   ├── components/
-│   │   ├── Header/
+│   │   ├── layouts/
+|   |   |   |── Header/
 │   │   ├── Home/
 │   │   ├── Category/
-│   │   └── ...
+│   │   └── Product/
+|   ├── context/         
+│   │   ├── StateProvider.jsx
+│   │   └── reducer.js
 │   ├── data/
 │   │   └── categories.js
-│   ├── assets/
-│   │   └── images/
+|   |   └── products.js
+│   ├── hooks/         
+│   │   └── useShop.js
 │   ├── App.jsx
 │   └── main.jsx
-├── public/
 └── README.md
 
 ---

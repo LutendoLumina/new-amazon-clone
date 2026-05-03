@@ -8,9 +8,10 @@ import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "./Header.css";
+import { useStateValue } from "../../../context/StateProvider";
 
 const Header = () => {
-  const cartItems = 0; // Replace with actual cart count from your state
+  const [{ basket }] = useStateValue();
 
   return (
     <div>
@@ -60,7 +61,9 @@ const Header = () => {
 
         <div className="cart">
           <AddShoppingCartOutlinedIcon className="cart_icon" />
-          {cartItems > 0 && <span className="cart_count">{cartItems}</span>}
+          {basket?.length > 0 && (
+            <span className="cart_count">{basket.length}</span>
+          )}
           <p>Cart</p>
         </div>
       </nav>
