@@ -1,18 +1,18 @@
 import React from "react";
 import { useShop } from "../../hooks/useShop";
-import "./CheckoutProduct.css";
+import "./CartProduct.css";
 
-const CheckoutProduct = ({ id, image, title, price, rating }) => {
+const CartProduct = ({ id, image, title, price, rating }) => {
   const { removeFromBasket } = useShop();
 
   return (
-    <div className="checkout_product">
-      <img src={image} alt={title} className="checkout_product_image" />
+    <div className="cart_product">
+      <img src={image} alt={title} className="cart_product_image" />
 
-      <div className="checkout_product_info">
-        <div className="checkout_product_header">
-          <p className="checkout_product_title">{title}</p>
-          <p className="checkout_product_price">
+      <div className="cart_product_info">
+        <div className="cart_product_header">
+          <p className="cart_product_title">{title}</p>
+          <p className="cart_product_price">
             <strong>
               {new Intl.NumberFormat("en-ZA", {
                 style: "currency",
@@ -22,9 +22,9 @@ const CheckoutProduct = ({ id, image, title, price, rating }) => {
           </p>
         </div>
 
-        <p className="checkout_product_stock">In Stock</p>
+        <p className="cart_product_stock">In Stock</p>
 
-        <div className="checkout_product_rating">
+        <div className="cart_product_rating">
           {Array(rating)
             .fill()
             .map((_, i) => (
@@ -32,7 +32,7 @@ const CheckoutProduct = ({ id, image, title, price, rating }) => {
             ))}
         </div>
 
-        <div className="checkout_product_actions">
+        <div className="cart_product_actions">
           <button className="action_link" onClick={() => removeFromBasket(id)}>Delete</button>
           <span className="separator">|</span>
           <button className="action_link">Save for later</button>
@@ -44,4 +44,4 @@ const CheckoutProduct = ({ id, image, title, price, rating }) => {
   );
 };
 
-export default CheckoutProduct;
+export default CartProduct;

@@ -68,7 +68,7 @@ const Header = () => {
           <strong>& Orders</strong>
         </div>
 
-        <Link to="/checkout">
+        <Link to="/cart">
           <div className="cart">
             <AddShoppingCartOutlinedIcon className="cart_icon" />
             {basket?.length > 0 && (

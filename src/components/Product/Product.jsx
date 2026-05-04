@@ -19,14 +19,6 @@ const Product = () => {
     return matchesCategory && matchesSearch;
   });
 
-  useEffect(() => {
-    // Clear search when the category changes
-    dispatch({
-      type: "SET_SEARCH_TERM",
-      term: "",
-    });
-  }, [categoryId]); // Runs every time the URL category changes
-
   return (
     <div className="product">
       <div className="product_banner">

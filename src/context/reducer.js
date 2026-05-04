@@ -4,6 +4,8 @@ const savedBasket = JSON.parse(localStorage.getItem("basket"));
 export const initialState = {
   basket: savedBasket || [], // Use the saved basket if it exists, otherwise start empty
   searchTerm: "",
+  user: null,
+  address: {}
 };
 
 // Selector to calculate the total price
@@ -50,6 +52,12 @@ const reducer = (state, action) => {
         ...state,
         searchTerm: action.term,
       };
+
+    case "SET_ADDRESS":
+      return {
+        ...state,
+        address: action.address,
+      }
 
     default:
       return state;
