@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/layouts/Header/Header";
-import Home from "./components/Home/Home";
+import Footer from "./components/layouts/Footer/Footer";
+import Home from "./pages/Home/Home";
 import "./App.css";
 import Product from "./components/Product/Product";
-import Cart from "./components/Cart/Cart";
-import Checkout from "./components/Checkout/Checkout";
-import Payment from "./components/Payment/Payment";
+import Cart from "./pages/Cart/Cart";
+import Checkout from "./pages/Checkout/Checkout";
+import Orders from "./pages/Orders/Orders";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
         <Route path="/category/:categoryId" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/payment" element={<Payment />} />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

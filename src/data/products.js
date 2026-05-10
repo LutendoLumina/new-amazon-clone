@@ -13,6 +13,21 @@ import decor from "../assets/products/decor.webp"
 import bra from "../assets/products/bra.jpg"
 import necklace from "../assets/products/necklace.jpg"
 import bags from "../assets/products/bags.jpg"
+import tissue from "../assets/products/tissue.jpg"
+import colgate from "../assets/products/colgate.webp"
+import iwisa from "../assets/products/iwisa.jpg"
+import omo from "../assets/products/omo.jpg"
+import faceCream from "../assets/products/face-cream.jpg"
+import lotion from "../assets/products/lotion.jpg"
+import momPack from "../assets/products/mom-pack.webp"
+import eyePatch from "../assets/products/eye-patch.jpg"
+import book1 from "../assets/products/book1.jpg"
+import book2 from "../assets/products/book2.jpg"
+import book3 from "../assets/products/book3.jpg"
+import vitamin1 from "../assets/products/vitamin1.jpg"
+import vitamin2 from "../assets/products/vitamin2.jpg"
+import vitamin3 from "../assets/products/vitamin3.jpg"
+
 
 export const products = [
   {
@@ -138,4 +153,121 @@ export const products = [
     rating: 4,
     image: bags
   },
+  {
+    id: 16,
+    category: "essentials",
+    title: "Baby Soft® Fresh White 2 Ply Toilet Paper - Pack of 18",
+    price: 138,
+    rating: 4,
+    image: tissue
+  },
+  {
+    id: 17,
+    category: "essentials",
+    title: "Colgate Triple Action Toothpaste, Value Pack (2x100ml)",
+    price: 34.99,
+    rating: 4,
+    image: colgate
+  },
+  {
+    id: 18,
+    category: "essentials",
+    title: "IWISA No1 Super Maize Meal 5 Kg",
+    price: 59.99,
+    rating: 4,
+    image: iwisa
+  },
+  {
+    id: 19,
+    category: "essentials",
+    title: "OMO Stain Removal Auto Washing Liquid Detergent with Comfort Freshness 3L",
+    price: 139.00,
+    rating: 4,
+    image: omo
+  },
+  
+  {
+    id: 20,
+    category: "beauty",
+    title: "COSRX Hyaluronic Acid Moisturizing Cream, Long-lasting Hydration, Rich Moisturizer for Sensitive Skin, Korean Skin Care, Mothers Day Gifts for Woman, 3.52 oz",
+    price: 343.81,
+    rating: 4,
+    image: faceCream
+  },
+  
+  {
+    id: 21,
+    category: "beauty",
+    title: "eos Shea Better Body Lotion Vanilla Cashmere, 24-Hour Moisture Skin Care, Lightweight & Non-Greasy, Natural Shea, Vegan, Vanilla Body Lotion, 16 fl oz",
+    price: 163.81,
+    rating: 5,
+    image: lotion
+  },
+  
+  {
+    id: 22,
+    category: "beauty",
+    title: "Tree Hut Mini Vanilla Everything Shower Gift Set, Mothers Day Gifts, Exfoliating Sugar Scrub, Foaming Gel Wash & Whipped Body Butter, Hydrating & Moisturizing Self-Care Gift Set for Smooth Skin",
+    price: 265.99,
+    rating: 4,
+    image: momPack
+  },
+  {
+    id: 23,
+    category: "beauty",
+    title: "BIODANCE Collagen Peptide Eye Patches, Anti Wrinkle & Smile Line Patches for Face, Under Eye Mask for Fine Lines & Eye Bags, Travel Essentials & Self Care Gifts for Women, Korean Skin Care (60 Count)",
+    price: 301.19,
+    rating: 4,
+    image: eyePatch
+  },
+  {
+    id: 24,
+    category: "books",
+    title: "You Are Unshaken - Includes 7-: Finding Security in God in an Uncertain World ",
+    price: 1464.00,
+    rating: 4,
+    image: book1
+  },
+  {
+    id: 25,
+    category: "books",
+    title: "Falling Forward: For Every Woman Who's Had to Begin Again",
+    price: 219.00,
+    rating: 4,
+    image: book2
+  },
+  {
+    id: 26,
+    category: "books",
+    title: "Finding Me: The moving and deeply personal memoir from Viola Davis, an instant no.1 Sunday Times bestseller",
+    price: 199.99,
+    rating: 4,
+    image: book3
+  },
+
+    {
+    id: 27,
+    category: "vitamins",
+    title: "SSA Supplements Creatine Supreme Monohydrate 500g",
+    price: 311.92,
+    rating: 4,
+    image: vitamin1
+  },
+    {
+    id: 28,
+    category: "vitamins",
+    title: "Himalaya Ashwagandha Herbal Supplement Capsules, Stress Relief and Energy Support, 60 Capsules",
+    price: 184.99,
+    rating: 4,
+    image: vitamin2
+  },
+    {
+    id: 29,
+    category: "vitamins",
+    title: "Nature's Choice Psyllium Husk Powder 150 g",
+    price: 101.99,
+    rating: 4,
+    image: vitamin3
+  },
+
 ];

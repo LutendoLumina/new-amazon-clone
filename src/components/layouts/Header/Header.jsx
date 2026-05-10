@@ -63,10 +63,12 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="returns">
-          <p>Returns</p>
-          <strong>& Orders</strong>
-        </div>
+        <Link to="/orders" className="header__link">
+          <div className="returns">
+            <p>Returns</p>
+            <strong>& Orders</strong>
+          </div>
+        </Link>
 
         <Link to="/cart">
           <div className="cart">

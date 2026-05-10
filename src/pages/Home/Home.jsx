@@ -1,8 +1,8 @@
 import homeImage from "../../assets/home_image.jpg";
 import "./Home.css";
-import Products from "../Product/Product";
+import Products from "../../components/Product/Product";
 import { categories } from "../../data/categories.js";
-import CategoryCard from "../Category/CategoryCard";
+import CategoryCard from "../../components/Category/CategoryCard";
 
 const Home = () => {  
   return (

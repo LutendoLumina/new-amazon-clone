@@ -21,6 +21,7 @@ const CartProduct = ({ id, image, title, price, rating }) => {
             </strong>
           </p>
         </div>
+        
 
         <p className="cart_product_stock">In Stock</p>
 

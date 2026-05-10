@@ -7,7 +7,7 @@
   background-color: #131921;
   color: white;
   padding: 0 15px;
-  gap: 15px;
+  gap: 10px;
 }
 
 /* Logo */
@@ -15,10 +15,12 @@
   width: 100px;
   height: auto;
   cursor: pointer;
+  padding: 5px;
+  filter: brightness(0) invert(1);
 }
 
 .logo:hover {
-    border: 1px solid white;
+  outline: 1px solid white;
 }
 
 /* Delivery Location Section */
@@ -27,13 +29,12 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px;
   border-radius: 3px;
-  transition: background-color 0.2s;
 }
 
 .country:hover {
-    border: 1px solid white;
+  outline: 1px solid white;
 }
 
 .country .country_d {
@@ -51,44 +52,37 @@
 /* Search Section */
 .search {
   display: flex;
-  width: 600px;
+  flex: 1;
   border-radius: 4px;
   overflow: hidden;
-  align-items: center;
-  background-color: white;
+  margin: 0 10px;
+  height: 40px;
+}
+
+.search:focus-within {
+  box-shadow: 0 0 0 2px #f3a847;
 }
 
 .search .search_input {
-  width: 90%;
-  height: 40px;
+  flex: 1;
   border: none;
   padding: 0 10px;
-  font-size: 14px;
+  font-size: 15px;
   outline: none;
 }
 
-.search .search_input::placeholder {
-  color: #999;
-}
-
 .search .search_icon {
-  width: 10%;
-  height: 40px;
-  background-color: #cd9042;
+  background-color: #febd69;
+  width: 45px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .search .search_icon:hover {
-  background-color: #d4a455;
-}
-
-.search .search_icon svg {
-  color: #131921;
-  font-size: 20px;
+  background-color: #f3a847;
 }
 
 /* Language Selector */
@@ -103,7 +97,7 @@
 }
 
 .language:hover {
-    border: 1px solid white;
+  outline: 1px solid white;
 }
 
 .flag {
@@ -132,7 +126,7 @@
 }
 
 .account:hover {
-    border: 1px solid white;
+  outline: 1px solid white;
 }
 
 .account p {
@@ -169,7 +163,7 @@
 }
 
 .returns:hover {
-    border: 1px solid white;
+  outline: 1px solid white;
 }
 
 .returns p {
@@ -186,49 +180,52 @@
 /* Cart Section */
 .cart {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   cursor: pointer;
-  padding: 10px;
-  border-radius: 3px;
-  transition: background-color 0.2s;
+  padding: 2px 8px;
+  color: white;
+  text-decoration: none;
+  background-color: transparent !important;
   position: relative;
-  min-width: 60px;
+  height: 45px; 
+  margin-right: 5px;
 }
 
 .cart:hover {
-    border: 1px solid white;
+    outline: 1px solid white;
+    border-radius: 2px;
 }
 
-.cart .cart_icon {
-  font-size: 30px;
+.cart_icon {
+  font-size: 32px !important;
   color: white;
-  position: relative;
 }
 
 .cart p {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 1.2;
+  margin-top: 12px;
 }
 
-/* Cart Badge */
+/* Cart Badge Positioning */
 .cart_count {
   position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #cd9042;
-  color: #131921;
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
+  top: 2px; 
+  left: 24px;
+  background-color: transparent;
+  color: #f08804;
+  font-size: 16px;
   font-weight: 700;
+  width: auto;
+  height: auto;
 }
+
+.header__link {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 /* Sub Navigation Bar */
 .sub-nav {
@@ -252,7 +249,7 @@
 }
 
 .sub-nav .menu:hover {
-    border: 1px solid white;
+  outline: 1px solid white;
 }
 
 .sub-nav .menu svg {
@@ -266,7 +263,7 @@
 }
 
 .sub-nav .menu p:hover {
-    border: none;
+  border: none;
 }
 
 .sub-nav p {
@@ -280,7 +277,7 @@
 }
 
 .sub-nav p:hover {
-    border: 1px solid white;
+  outline: 1px solid white;
 }
 
 /* Responsive Design */
