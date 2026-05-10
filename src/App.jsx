@@ -8,6 +8,7 @@ import Product from "./components/Product/Product";
 import Cart from "./pages/Cart/Cart";
 import Checkout from "./pages/Checkout/Checkout";
 import Orders from "./pages/Orders/Orders";
+import "./responsive.css";
 
 function App() {
   return (
