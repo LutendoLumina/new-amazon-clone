@@ -1,5 +1,5 @@
 import gamingImg from "../assets/categories/game-category.jpg"
-import homeImg from "../assets/categories/home.png"
+import homeImg from "../assets/categories/home2.png"
 import kitchenImg from "../assets/categories/kitchen.jpg"
 import momImg from "../assets/categories/mom.jpg"
 import essentials from '../assets/categories/essentials.jpg'
