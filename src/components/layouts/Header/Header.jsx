@@ -71,10 +71,12 @@ const Header = () => {
         </Link>
 
         <Link to="/cart">
-          <div className="cart">
+          <div className="header_cart">
             <AddShoppingCartOutlinedIcon className="cart_icon" />
             {basket?.length > 0 && (
-              <span className="cart_count">{basket.length}</span>
+              <span className="cart_count">
+                {basket.reduce((total, item) => total + (item.quantity || 1), 0)}
+              </span>
             )}
             <p>Cart</p>
           </div>

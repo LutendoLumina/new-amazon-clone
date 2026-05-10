@@ -31,7 +31,7 @@ export const useShop = () => {
 
   return{
     cart: basket || [],
-    itemCount: basket?.length || 0,
+    itemCount: basket?.reduce((total, item) => total + (item.quantity || 1), 0) || 0,
     addToBasket,
     removeFromBasket,
     getCartTotal,

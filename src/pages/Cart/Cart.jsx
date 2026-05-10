@@ -20,17 +20,34 @@ const Cart = () => {
         <div>
           <h2 className="cart_title">Your Shopping Basket</h2>
 
-          {/* List all the products in the basket */}
-          {cart?.map((item, index) => (
-            <CartProduct
-              key={index}
-              id={item.id}
-              title={item.title}
-              image={item.image}
-              price={item.price}
-              rating={item.rating}
-            />
-          ))}
+          {/* Show empty state if no items */}
+          {cart?.length === 0 ? (
+            <div className="cart_empty">
+              <h3>Your Basket is Empty</h3>
+              <p>You have no items in your shopping basket. Start shopping to add items!</p>
+              <button 
+                className="cart_empty_button"
+                onClick={() => navigate("/")}
+              >
+                Continue Shopping
+              </button>
+            </div>
+          ) : (
+            <>
+              {/* List all the products in the basket */}
+              {cart?.map((item, index) => (
+                <CartProduct
+                  key={index}
+                  id={item.id}
+                  title={item.title}
+                  image={item.image}
+                  price={item.price}
+                  rating={item.rating}
+                  quantity={item.quantity || 1}
+                />
+              ))}
+            </>
+          )}
         </div>
       </div>
 
@@ -43,7 +60,10 @@ const Cart = () => {
           <small className="subtotal_gift">
             <input type="checkbox" /> This order contains a gift
           </small>
-          <button onClick={() => navigate("/checkout")}>
+          <button 
+            onClick={() => navigate("/checkout")}
+            disabled={cart?.length === 0}
+          >
             Proceed to checkout
           </button>
         </div>

@@ -111,9 +111,13 @@ function Checkout() {
             <div className="summary-item" key={index}>
               <div className="summary-item-details">
                 <p className="summary-item-title">
-                  {item.title} <strong>x1</strong>
+                  {item.title} <strong>x{item.quantity || 1}</strong>
                 </p>
-                <p className="summary-item-price">ZAR {item.price}</p>
+                <p className="summary-item-price">
+                  ZAR {(item.price * (item.quantity || 1)).toLocaleString("en-ZA", {
+                    minimumFractionDigits: 2,
+                  })}
+                </p>
               </div>
             </div>
           ))}

@@ -1,9 +1,13 @@
 import React from "react";
 import { useShop } from "../../hooks/useShop";
+import { useStateValue } from "../../context/StateProvider";
+import AddIcon from '@mui/icons-material/Add';
+import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import "./CartProduct.css";
 
-const CartProduct = ({ id, image, title, price, rating }) => {
-  const { removeFromBasket } = useShop();
+const CartProduct = ({ id, image, title, price, rating, quantity, hideButton }) => {
+  const [{ basket }, dispatch] = useStateValue();
+  const { removeFromBasket, addToBasket } = useShop();
 
   return (
     <div className="cart_product">
@@ -17,11 +21,10 @@ const CartProduct = ({ id, image, title, price, rating }) => {
               {new Intl.NumberFormat("en-ZA", {
                 style: "currency",
                 currency: "ZAR",
-              }).format(price)}
+              }).format(price * (quantity || 1))}
             </strong>
           </p>
         </div>
-        
 
         <p className="cart_product_stock">In Stock</p>
 
@@ -33,13 +36,31 @@ const CartProduct = ({ id, image, title, price, rating }) => {
             ))}
         </div>
 
-        <div className="cart_product_actions">
-          <button className="action_link" onClick={() => removeFromBasket(id)}>Delete</button>
-          <span className="separator">|</span>
-          <button className="action_link">Save for later</button>
-          <span className="separator">|</span>
-          <button className="action_link">Compare with similar items</button>
-        </div>
+        {!hideButton && (
+          <>
+            <div className="cart_product_quantityContainer">
+              <div className="cart_product_quantityPicker">
+                <button onClick={() => removeFromBasket(id)}>
+                  <RemoveOutlinedIcon className="cart_product_icon" />
+                </button>
+                <span>{quantity || 1}</span>
+                <button onClick={() => addToBasket({id, title, image, price, rating})}>
+                  <AddIcon className="cart_product_icon" />
+                </button>
+              </div>
+            </div>
+
+            <div className="cart_product_actions">
+              <button className="action_link" onClick={() => removeFromBasket(id)}>
+                Delete
+              </button>
+              <span className="separator">|</span>
+              <button className="action_link">Save for later</button>
+              <span className="separator">|</span>
+              <button className="action_link">Compare with similar items</button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

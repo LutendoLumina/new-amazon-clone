@@ -178,7 +178,7 @@
 }
 
 /* Cart Section */
-.cart {
+.header_cart {
   display: flex;
   align-items: flex-end;
   cursor: pointer;
@@ -191,7 +191,7 @@
   margin-right: 5px;
 }
 
-.cart:hover {
+.header_cart:hover {
     outline: 1px solid white;
     border-radius: 2px;
 }
@@ -201,17 +201,18 @@
   color: white;
 }
 
-.cart p {
+.header_cart p {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
   margin-top: 12px;
+  color: white;
 }
 
 /* Cart Badge Positioning */
 .cart_count {
   position: absolute;
-  top: 2px; 
+  top: -3px; 
   left: 24px;
   background-color: transparent;
   color: #f08804;

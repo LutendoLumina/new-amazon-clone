@@ -3,6 +3,7 @@
   padding: 20px;
   background-color: white;
   height: max-content;
+  color: #08060d;
 }
 
 .cart_ad {
@@ -62,5 +63,52 @@
 }
 
 .subtotal > button:hover {
-    background: #F7CA00;
+  background: #F7CA00;
+}
+
+.cart_empty {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.cart_empty h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0F1111;
+  margin: 0 0 10px 0;
+}
+
+.cart_empty p {
+  font-size: 16px;
+  color: #565959;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.cart_empty_button {
+  background: #ffd814;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F1111;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  transition: background-color 0.2s;
+}
+
+.cart_empty_button:hover {
+  background: #F7CA00;
+}
+
+.subtotal > button:disabled {
+  background-color: #e0e0e0;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none;
 }
