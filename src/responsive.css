@@ -1,8 +1,3 @@
-/* --------------------------------------------------------------------------
-   Responsive layout — load after App / component styles (see App.jsx import order)
-   Breakpoints: wide (4-col grid) → tablet (2-col) → phone (1-col + compact header)
-   -------------------------------------------------------------------------- */
-
 /* --- Product listing: 4 → 2 → 1 columns -------------------------------- */
 div.product .product_grid {
   display: grid;

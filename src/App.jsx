@@ -3,11 +3,11 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/layouts/Header/Header";
 import Footer from "./components/layouts/Footer/Footer";
 import Home from "./pages/Home/Home";
-import "./App.css";
 import Product from "./components/Product/Product";
 import Cart from "./pages/Cart/Cart";
 import Checkout from "./pages/Checkout/Checkout";
 import Orders from "./pages/Orders/Orders";
+import "./App.css";
 import "./responsive.css";
 
 function App() {
