@@ -2,7 +2,7 @@
 
 A fully functional Amazon-inspired e-commerce application built with React and JavaScript (Vite). This project recreates the core shopping experience with a responsive design, product management, cart functionality, and multiple custom features.
 
-**Live Demo:** [](https://lutendo-amazon-clone.netlify.app/) 🚀
+**Live Demo:** [https://lutendo-amazon-clone.netlify.app/]
 
 ---
 
